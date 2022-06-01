@@ -9,10 +9,12 @@ import pages.JobPage;
 import utils.CommonMethods;
 
 public class TerminateEmploymentSteps extends CommonMethods {
+	
     @When("admin user click on Terminate Employment button")
     public void admin_user_click_on_terminate_employment_button() {
         click(job.terminateEmployementBtn);
     }
+    
     @When("admin user fills the Termination window form with {string} and {string} and {string}")
     public void admin_user_fills_the_termination_window_form_with_and_and(String reason, String date, String note) {
         selectDdValue(job.reason_DDF, reason);
@@ -23,10 +25,12 @@ public class TerminateEmploymentSteps extends CommonMethods {
     public void click_on_confirm_button() {
         click(job.confirmBtn);
     }
+    
     @Then("specified employee is terminated")
     public void specified_employee_is_terminated() {
         Assert.assertTrue("Assertion on Employee Termination: FAILED", job.terminated_on_Stamp.isDisplayed());
     }
+    
     @Then("following data is displayed in Termination window stamp {string} {string} {string}")
     public void following_data_is_displayed_in_termination_window_stamp(String reason, String date, String note) {
         click(job.terminated_on_Stamp);
@@ -38,10 +42,7 @@ public class TerminateEmploymentSteps extends CommonMethods {
             }
         }
         Assert.assertEquals(reason, flag);
-        System.out.println("Assertion on Reason: Passed");
         Assert.assertEquals(date, job.date_Field.getAttribute("value"));
-        System.out.println("Assertion on Date: Passed");
         Assert.assertEquals(note, job.note_Field.getText());
-        System.out.println("Assertion on Note: Passed");
     }
 }

@@ -1,22 +1,22 @@
 package steps;
 
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
-import pages.AddEmployeePage;
-import pages.DashboardPage;
-import pages.EmployeeListPage;
-import pages.PersonalDetailsPage;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import utils.CommonMethods;
 import utils.Constants;
-
-import java.util.List;
 
 public class AddEmployeeSteps extends CommonMethods {
     public static String empID;
     public static String empName;
 
+    @Given("user navigates to AddEmployeePage")
+	public void user_navigates_to_AddEmployeePage() {
+    	dash.navigateToAddEmployee();
+	}
 
     @When("admin user enters {string} {string} and {string}")
     public void admin_user_enters_and(String firstName, String middleName, String lastName) {

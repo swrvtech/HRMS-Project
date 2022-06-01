@@ -57,6 +57,7 @@ public class CommonMethods extends PageInitializer{
 		driver.get(getAlertText());
 		driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		PageInitializer.initializePageObjects();
 	}
 
 	/**

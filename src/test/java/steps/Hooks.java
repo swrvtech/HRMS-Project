@@ -4,6 +4,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import utils.CommonMethods;
+import utils.PageInitializer;
 
 public class Hooks {
 
@@ -13,6 +14,7 @@ public class Hooks {
 	@Before
 	public void start() {
 		CommonMethods.openBrowser();
+		PageInitializer.initializePageObjects();
 	}
 
 	/**

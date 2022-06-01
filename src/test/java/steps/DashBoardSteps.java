@@ -5,7 +5,9 @@ import pages.DashboardPage;
 import utils.CommonMethods;
 
 public class DashBoardSteps extends CommonMethods {
-    @When("admin user clicks on PIM button")
+    
+	
+	@When("admin user clicks on PIM button")
     public void admin_user_clicks_on_pim_button() {
         click(dash.pimOption);
     }
