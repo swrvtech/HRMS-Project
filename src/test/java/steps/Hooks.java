@@ -14,7 +14,6 @@ public class Hooks {
 	@Before
 	public void start() {
 		CommonMethods.openBrowser();
-		PageInitializer.initializePageObjects();
 	}
 
 	/**

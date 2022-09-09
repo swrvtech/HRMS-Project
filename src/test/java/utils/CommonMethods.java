@@ -35,7 +35,7 @@ public class CommonMethods extends PageInitializer{
 	protected static WebDriver driver;
 
 	/**
-	 * this method opens a browser, maximizes window and sets implicit wait
+	 * This method navigates to the specified browser and opens any url
 	 */
 	public static void openBrowser() {
 
@@ -57,7 +57,7 @@ public class CommonMethods extends PageInitializer{
 		driver.get(getAlertText());
 		driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		PageInitializer.initializePageObjects();
+		initializePageObjects();
 	}
 
 	/**

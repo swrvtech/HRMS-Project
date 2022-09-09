@@ -10,7 +10,8 @@ import utils.CommonMethods;
 import utils.Constants;
 
 public class AddEmployeeSteps extends CommonMethods {
-    public static String empID;
+   
+	public static String empID;
     public static String empName;
 
     @Given("user navigates to AddEmployeePage")
@@ -37,6 +38,7 @@ public class AddEmployeeSteps extends CommonMethods {
     public void employee_added_successfully() {
         Assert.assertEquals("Assertion Failed!", empID, pDetails.actual_employeeID.getAttribute("value"));
     }
+    
     @Then("employee added successfully in Employee List")
     public void employee_added_successfully_in_employee_list() {
         click(dash.pimOption);
