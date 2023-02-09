@@ -13,14 +13,14 @@ public class DashboardPage extends CommonMethods {
 	@FindBy(id = "menu_pim_viewEmployeeList")
 	public WebElement employeeListOption;
 
-	@FindBy(id = "menu_pim_addEmployee")
-	public WebElement addEmployeeBtn;
-
 	@FindBy(id = "menu_admin_Qualifications")
 	public WebElement qualificationOption;
 
 	@FindBy(id = "menu_admin_viewLicenses")
 	public WebElement licenseOption;
+
+	@FindBy(id = "menu_pim_addEmployee")
+	public WebElement addEmployeeBtn;
 
 	@FindBy(id = "menu_admin_viewAdminModule") // added by Olena
 	public WebElement AdminTabBtn;
@@ -42,6 +42,9 @@ public class DashboardPage extends CommonMethods {
 
 	@FindBy(id = "menu_admin_viewLanguages") // added by Olena
 	public WebElement LanguagesTabBtn;
+
+	@FindBy(id="welcome")
+	public WebElement welcomeMessage;
 
 	public DashboardPage() {
 		PageFactory.initElements(driver, this);

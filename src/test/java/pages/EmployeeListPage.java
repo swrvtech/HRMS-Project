@@ -8,9 +8,6 @@ import utils.CommonMethods;
 import java.util.List;
 
 public class EmployeeListPage extends CommonMethods {
-    public EmployeeListPage() {
-        PageFactory.initElements(driver, this);
-    }
 
     @FindBy(id = "empsearch_id")
     public WebElement idEmployee;
@@ -21,9 +18,14 @@ public class EmployeeListPage extends CommonMethods {
     @FindBy(id = "empsearch_employee_name_empName")
     public WebElement employeeNameField;
 
-    @FindBy(xpath = "//table[@id='resultTable']/tbody/tr") // added elements for Olena's task
-    public List<WebElement> EmployeeInfoTable;
+    @FindBy(xpath = "//table[@id='resultTable']/tbody/tr")
+    public List<WebElement> employeeInfoTable;
 
-    @FindBy(xpath = "(//table[@id='resultTable']/tbody/tr/td[2])[1]/a")// added elements for Olena's task
-    public WebElement IdInTable;
+    @FindBy(xpath = "(//table[@id='resultTable']/tbody/tr/td[2])[1]/a")
+    public WebElement idInTable;
+
+    public EmployeeListPage() {
+
+        PageFactory.initElements(driver, this);
+    }
 }

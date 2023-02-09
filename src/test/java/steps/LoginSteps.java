@@ -13,17 +13,18 @@ public class LoginSteps extends CommonMethods {
 	@When("user enter {string} and {string}")
 	public void user_enter_valid_and(String username, String password) {
 		sendText(loginPage.usernameBox, username);
-		sendText(loginPage.usernameBox, password);
+		sendText(loginPage.passwordBox, password);
 	}
 	
 	@When("user click on login button")
 	public void user_click_on_login_button() {
+
 		click(loginPage.loginButton);
 	}
 	
-	@Then("{string} is successfully logged in")
+	@Then("user is successfully logged in")
 	public void is_successfully_logged_in(String string) {
-
+		Assert.assertTrue("Welcome message is not displayed", dash.welcomeMessage.isDisplayed());
 	}
 	
 	@Then("user see {string}")

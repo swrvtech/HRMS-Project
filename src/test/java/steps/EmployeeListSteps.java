@@ -20,7 +20,7 @@ public class EmployeeListSteps extends CommonMethods {
 
 	@When("admin user clicks on Employee with noted ID")
 	public void admin_user_clicks_on_employee_with_noted_id() {
-		for (WebElement row : employeeListPage.EmployeeInfoTable) {
+		for (WebElement row : employeeListPage.employeeInfoTable) {
 			if (row.getText().contains(AddEmployeeSteps.empID)) {
 				click(driver.findElement(By
 						.xpath("//table[@id='resultTable']/tbody/tr/td/a[text() = '" + AddEmployeeSteps.empID + "']")));

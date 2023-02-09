@@ -11,6 +11,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -29,8 +30,9 @@ import org.openqa.selenium.support.ui.UnexpectedTagNameException;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import steps.PageInitializer;
 
-public class CommonMethods extends PageInitializer{
+public class CommonMethods extends PageInitializer {
 
 	protected static WebDriver driver;
 
@@ -54,10 +56,12 @@ public class CommonMethods extends PageInitializer{
 			throw new RuntimeException("Invalid browser name");
 		}
 
-		driver.get(getAlertText());
-		driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		driver.get(ConfigReader.getPropertyValue("url"));
+		driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		initializePageObjects();
+
+		DOMConfigurator.configure("log4j.xml");
 	}
 
 	/**

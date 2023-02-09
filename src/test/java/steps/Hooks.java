@@ -4,7 +4,6 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import utils.CommonMethods;
-import utils.PageInitializer;
 
 public class Hooks {
 
@@ -13,6 +12,7 @@ public class Hooks {
 	 */
 	@Before
 	public void start() {
+
 		CommonMethods.openBrowser();
 	}
 
@@ -23,6 +23,7 @@ public class Hooks {
 	 */
 	@After
 	public void end(Scenario scenario) {
+
 		byte[] pic;
 		if (scenario.isFailed()) {
 			pic = CommonMethods.takeScreenshot("failed/" + scenario.getName());

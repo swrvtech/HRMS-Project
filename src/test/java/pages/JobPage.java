@@ -9,6 +9,7 @@ import java.util.List;
 
 public class JobPage extends CommonMethods {
     public JobPage(){
+
         PageFactory.initElements(driver,this);
     }
 

@@ -4,11 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import pages.*;
 import utils.CommonMethods;
 import utils.Constants;
 
@@ -21,11 +17,11 @@ public class AddEmloyeeJobDetailsSteps extends CommonMethods {
 
     @When("admin user clicks on searched employee")
     public void admin_user_clicks_on_searched_employee() throws InterruptedException {
-        for (int i = 0; i < employeeListPage.EmployeeInfoTable.size(); i++) {
-            String textRow = employeeListPage.EmployeeInfoTable.get(i).getText();
+        for (int i = 0; i < employeeListPage.employeeInfoTable.size(); i++) {
+            String textRow = employeeListPage.employeeInfoTable.get(i).getText();
             System.out.println(textRow);
             if (textRow.contains(AddEmployeeSteps.empName)) {
-                click(employeeListPage.IdInTable);
+                click(employeeListPage.idInTable);
                 break;
             }
         }

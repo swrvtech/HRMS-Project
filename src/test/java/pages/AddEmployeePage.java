@@ -7,26 +7,37 @@ import utils.CommonMethods;
 
 public class AddEmployeePage extends CommonMethods {
 
-	public AddEmployeePage() {
-		PageFactory.initElements(driver, this);
-	}
+    @FindBy(id = "firstName")
+    public WebElement firstName;
 
-	@FindBy(id = "firstName")
-	public WebElement firstName;
+    @FindBy(id = "middleName")
+    public WebElement middleName;
 
-	@FindBy(id = "middleName")
-	public WebElement middleName;
+    @FindBy(id = "lastName")
+    public WebElement lastName;
 
-	@FindBy(id = "lastName")
-	public WebElement lastName;
+    @FindBy(id = "photofile")
+    public WebElement photograph;
 
-	@FindBy(id = "photofile")
-	public WebElement photograph;
+    @FindBy(id = "btnSave")
+    public WebElement saveBtn;
 
-	@FindBy(id = "btnSave")
-	public WebElement saveBtn;
+    @FindBy(id = "employeeId")
+    public WebElement empID;
 
-	@FindBy(id = "employeeId")
-	public WebElement empID;
+    @FindBy(id = "user_name")
+    public WebElement createUsername;
 
+    @FindBy(id = "user_password")
+    public WebElement createPassword;
+
+    @FindBy(id = "re_password")
+    public WebElement confirmPassword;
+
+    @FindBy(id = "chkLogin")
+    public WebElement checkBox;
+
+    public AddEmployeePage() {
+        PageFactory.initElements(driver, this);
+    }
 }

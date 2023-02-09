@@ -1,38 +1,49 @@
 @addEmployee
 Feature: Add Employee
 
-  Background: 
-    Given user is logged with valid admin credentials
+  Background:
+    Given user is logged in with admin credentials
     And user navigates to AddEmployeePage
 
   @smoke @sprint5
-  Scenario: Add Employee with first and lastname
-    When user enters employees "John" and "Doe"
-    And user clicks save button
-    Then "John Doe" is added successfully
+  Scenario: Add Employee
+    When admin user enters "John" "J" and "Doe"
+    And admin user click on save button
+    Then employee added successfully
 
   @regression
   Scenario: Add Employee without employee id
-    When user enters employees "Jane" and "Smith"
+    When admin user enters "Jane" "J" and "Smith"
     And user deletes employee id
-    And user clicks save button
-    Then "Jane Smith" is added successfully
+    And admin user click on save button
+    Then employee added successfully
 
   @regression
   Scenario: AddEmployee and create Login Credentials
-    When user enters employees "James" and "Smith"
+    When admin user enters "Sumair" "J" and "Jawaid"
     And user clicks on create login checkbox
-    And user enters login credentials as "James123" and "James123.."
-    And user clicks save button
-    Then "James Smith" is added successfully
+    And user enters login credentials as "SumairJ" and "!Sumair123!"
+    And admin user click on save button
+    Then employee added successfully
 
   @regression
-  Scenario: Adding multiple employees
-    When user enters employee details and click on save then employee is added
+  Scenario Outline: Adding multiple employees
+    And admin user enters "<FirstName>" "<MiddleName>" and "<LastName>"
+    And admin user click on save button
+    Then employee added successfully
+    Examples:
       | FirstName | MiddleName | LastName |
-      | John      | J          | Doe      |
-      | Jane      | J          | Smith    |
+      | Gulnam    | G          | Mazar    |
+      | Rampal    | R          | Chambel  |
+      | Azam      | A          | Kamar    |
 
-  @regression
-  Scenario: Adding multiple employees from excel
-    When user enters employee data from "EmployeeLoginCredentials" excel sheet then employee is added
+  @excel
+  Scenario: Adding multiple employees using excel file
+    When user adds multiple employee from excel using "EmployeeData" and verify it
+
+  @db @regression
+  Scenario: Adding employee and verifying it is stored in database
+    And admin user enters "Asel" "A" and "Umurzakova"
+    And user captures employee id
+    And admin user click on save button
+    And added employee is displayed in database

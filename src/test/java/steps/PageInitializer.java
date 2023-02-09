@@ -1,4 +1,4 @@
-package utils;
+package steps;
 
 import pages.AddEmployeePage;
 import pages.AddLicensePage;

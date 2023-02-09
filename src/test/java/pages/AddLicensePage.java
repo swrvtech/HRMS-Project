@@ -10,10 +10,6 @@ import java.util.List;
 
 public class AddLicensePage extends CommonMethods {
 
-    public AddLicensePage() {
-        PageFactory.initElements(driver, this);
-    }
-
     @FindBy(id = "btnAdd")
     public WebElement addLicenceButton;
 
@@ -31,4 +27,8 @@ public class AddLicensePage extends CommonMethods {
 
     @FindBy(id = "btnDel")
     public WebElement deleteBtn;
+
+    public AddLicensePage() {
+        PageFactory.initElements(driver, this);
+    }
 }
