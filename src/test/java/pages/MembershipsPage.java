@@ -33,7 +33,7 @@ public class MembershipsPage extends CommonMethods {
 	@FindBy(id = "membership_subscriptionRenewalDate")
 	public WebElement membershipRenewalDate;
 
-	@FindBy(id = "btnSaveMembership")
+	@FindBy(id = "btnSave")
 	public WebElement btnSaveMembership;
 
 	@FindBy(xpath = "//table[@class ='table hover']/tbody/tr")

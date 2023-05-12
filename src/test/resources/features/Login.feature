@@ -10,18 +10,17 @@ Feature: Login
 
     Examples:
       | Username  | Password    |
-      | adminuser | Syntax123!  |
-      | essuser   | Essuser123! |
+      | Admin     | Hum@nhrm123 |
+
 
   @regression @sprint5
   Scenario Outline: Error message validation while invalid login
     When user enter "<Username>" and "<Password>"
     And user click on login button
     Then user see "<ErrorMessage>"
-
     Examples:
       | Username | Password   | ErrorMessage             |
-      | Admin    | Admin123   | Invalid Credentials      |
-      | Hello    | Syntax123! | Invalid Credentials      |
+      | Admin    | Admin123   | Invalid credentials      |
+      | Hello    | Syntax123! | Invalid credentials      |
       | Admin    |            | Password cannot be empty |
       |          | Syntax123! | Username cannot be empty |

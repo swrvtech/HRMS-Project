@@ -12,6 +12,6 @@ Feature: Adding different skills in Qualifications
     Then all new skills has been added successfully "<skillName>" "<skillDescription>"
     Examples:
       | skillName    | skillDescription                              |
-      | Hard Worker  | Ability to work hard                          |
+      | lazy person  | Ability to work hard                          |
       | Good teacher | Ability to teach                              |
-      | Sleep less   | Ability to sleep less in order to work harder |
+

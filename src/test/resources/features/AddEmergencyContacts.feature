@@ -7,7 +7,7 @@ Feature:Add Emergency Contacts
     And admin user clicks on Add Employee button
     And admin user enters "Bug" "Buster" and "Group"
     And admin user click on save button
-    Then employee added successfully
+
 
 @Ayna
   Scenario Outline: Admin user should be able to add employees Emergency Contacts

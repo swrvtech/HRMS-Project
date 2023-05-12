@@ -30,4 +30,8 @@ public class PersonalDetailsPage extends CommonMethods {
     public WebElement membershipsBtn;
 
 
+
+    @FindBy(id="personal_txtEmpFirstName")
+    public WebElement firstName;
+
 }

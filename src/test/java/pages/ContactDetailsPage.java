@@ -6,9 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
 public class ContactDetailsPage extends CommonMethods {
-   public ContactDetailsPage() {
-        PageFactory.initElements(driver, this);
-    }
+
 
     @FindBy(xpath = "//input[@id='btnSave' and @value='Edit']")
     public WebElement editBtn;
@@ -48,5 +46,8 @@ public class ContactDetailsPage extends CommonMethods {
 
     @FindBy(id = "contact_emp_oth_email")
     public WebElement oth_email_Field;
+ public ContactDetailsPage() {
+  PageFactory.initElements(driver, this);
+ }
 
 }

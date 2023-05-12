@@ -23,7 +23,7 @@ public class LoginSteps extends CommonMethods {
 	}
 	
 	@Then("user is successfully logged in")
-	public void is_successfully_logged_in(String string) {
+	public void is_successfully_logged_in() {
 		Assert.assertTrue("Welcome message is not displayed", dash.welcomeMessage.isDisplayed());
 	}
 	

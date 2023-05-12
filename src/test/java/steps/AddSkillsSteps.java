@@ -33,13 +33,15 @@ public class AddSkillsSteps extends CommonMethods {
     @Then("all new skills has been added successfully {string} {string}")
     public void all_new_skills_has_been_added_successfully(String skillName, String skillDescription) {
         jsScroll();
-        for (WebElement row : skills.skillTable
-        ) {
+        boolean skillAdded=false;
+        for (WebElement row : skills.skillTable) {
             if (row.getText().contains(skillName) && row.getText().contains(skillDescription)) {
                 System.out.println("Skill "+skillName+" has been added");
+                skillAdded=true;
                 break;
             }
         }
+        Assert.assertTrue(skillAdded);
     }
 }
 

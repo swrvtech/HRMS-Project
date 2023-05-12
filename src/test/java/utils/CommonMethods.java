@@ -3,11 +3,7 @@ package utils;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -62,6 +58,9 @@ public class CommonMethods extends PageInitializer {
 		initializePageObjects();
 
 		DOMConfigurator.configure("log4j.xml");
+		Log.startTestCase("This is the beginning of my test case ");
+		Log.info("My test case id executing right now");
+		Log.warning("My test case might have some trivial issue");
 	}
 
 	/**
@@ -374,5 +373,20 @@ public class CommonMethods extends PageInitializer {
         String Month = (gc.get(Calendar.MONTH) + 1) < 10 ? "0" + (gc.get(Calendar.MONTH) + 1) : "" + (gc.get(Calendar.MONTH) + 1);
         return gc.get(Calendar.YEAR) + "-" + Month + "-" + Day;
     }
+	public static String randomAlphabets() {
+		Random random = new Random();
+		int alphabetCount = 26;
+		char[] alphabets = new char[alphabetCount];
+		for (int i = 0; i < alphabetCount; i++) {
+			alphabets[i] = (char) ('a' + i);
+		}
 
+		StringBuilder result = new StringBuilder();
+		for (int i = 0; i < 4; i++) {
+			int index = random.nextInt(alphabetCount);
+			char randomAlphabet = alphabets[index];
+			result.append(randomAlphabet);
+		}
+		return  result.toString() ;
+	}
 }
