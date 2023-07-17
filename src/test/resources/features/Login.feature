@@ -25,4 +25,3 @@ Feature: Login
       | Admin    |            | Password cannot be empty |
       |          | Syntax123! | Username cannot be empty |
 
-    #checked
