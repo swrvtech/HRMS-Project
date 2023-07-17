@@ -12,3 +12,5 @@ Feature: Multiple Dependents
     When admin user clicks on Dependents and on add btn
     And admin user enters "Ladybug" selects Relationship and DOB and clicks on save btn
     Then added information is displayed and editable "Ladybug"
+
+    #checked

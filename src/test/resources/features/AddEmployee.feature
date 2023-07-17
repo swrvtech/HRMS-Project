@@ -36,6 +36,7 @@ Feature: Add Employee
       | Gulnam    | G          | Mazar    |
       | Rampal    | R          | Chambel  |
 
+#    checked
 
 
 

@@ -20,7 +20,7 @@ public class AddEmployeesSkillsSteps extends CommonMethods {
         sendText(qualification.skill_comments_Field, comments);
         Thread.sleep(2000);
     }
-
+//
     @When("admin user select skill2 from DD, enters years and comments {string} {string} {string}")
     public void admin_user_select_skill2_from_dd_enters_years_and_comments(String skill2, String years2, String comments2) throws InterruptedException {
         selectDdValue(qualification.sskill_DDF, skill2);

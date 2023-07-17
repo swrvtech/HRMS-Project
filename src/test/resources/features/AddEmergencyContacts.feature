@@ -18,4 +18,5 @@ Feature:Add Emergency Contacts
     Examples:
       |Name     |Relationship|Home Telephone|Mobile    |Work Telephone|
       |Joe Black|Son         |7857645467    |6462340987|7852543678    |
+#  checked
 

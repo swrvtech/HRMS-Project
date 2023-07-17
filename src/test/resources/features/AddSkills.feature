@@ -15,3 +15,4 @@ Feature: Adding different skills in Qualifications
       | lazy person  | Ability to work hard                          |
       | Good teacher | Ability to teach                              |
 
+#    checked

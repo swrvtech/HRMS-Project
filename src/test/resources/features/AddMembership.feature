@@ -14,3 +14,4 @@ Feature: Add Membership
       |MembershipName|
       |Brain Buster|
       |Smart Pants |
+#     checked

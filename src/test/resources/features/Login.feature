@@ -24,3 +24,5 @@ Feature: Login
       | Hello    | Syntax123! | Invalid credentials      |
       | Admin    |            | Password cannot be empty |
       |          | Syntax123! | Username cannot be empty |
+
+    #checked

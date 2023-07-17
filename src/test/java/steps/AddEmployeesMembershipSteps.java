@@ -15,7 +15,7 @@ public class AddEmployeesMembershipSteps extends CommonMethods {
         jsScroll();
         click(pDetails.membershipsBtn);
     }
-
+//
     @When("admin user clicks on Add button in Assigned Memberships block")
     public void admin_user_clicks_on_add_button_in_assigned_memberships_block() {
         click(membership.addMembershipButton);
