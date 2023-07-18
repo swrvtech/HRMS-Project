@@ -36,6 +36,13 @@ Feature: Add Employee
       | Gulnam    | G          | Mazar    |
       | Rampal    | R          | Chambel  |
 
+  @MissingRequiredEmployeeInformation102
+  Scenario: missing employee information
+    When user do not enter either firstname or lastname show Require field missing error
+      |firstName|middleName|lastName|
+      |         |ms        |Zck     |
+      |Justin   |ms        |        |
+
 
 
 

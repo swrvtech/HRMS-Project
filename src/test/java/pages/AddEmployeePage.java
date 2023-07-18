@@ -37,6 +37,12 @@ public class AddEmployeePage extends CommonMethods {
     @FindBy(id = "chkLogin")
     public WebElement checkBox;
 
+    @FindBy(xpath = "//span[@for='firstName']")
+    public WebElement requiredFirstNameError;
+
+    @FindBy(xpath = "//span[@for='lastName']")
+    public WebElement requiredLastNameError;
+
     public AddEmployeePage() {
         PageFactory.initElements(driver, this);
     }

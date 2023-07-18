@@ -31,6 +31,7 @@ public class PageInitializer {
 	public static QualificationsPage qualification;
 	public static SkillsPage skills;
 
+
 	public static void initializePageObjects() {
 		loginPage = new LoginPage();
 		dash = new DashboardPage();
