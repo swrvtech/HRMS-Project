@@ -8,6 +8,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
 public class APIStepsClass {
 
@@ -61,6 +62,18 @@ public class APIStepsClass {
     @Then("the status code will be {int} for this call")
     public void the_status_code_will_be_for_this_call(Integer statusCode) {
         response.then().assertThat().statusCode(statusCode);
+    }
+
+    @Then("the employee created contains key {string} and value {string}")
+    public void the_employee_created_contains_key_and_value(String key, String value) {
+        response.then().assertThat().body(key,equalTo(value));
+    }
+
+
+    @Then("the employee id {string} is stored as a global variable")
+    public void the_employee_id_is_stored_as_a_global_variable(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
     }
 
 }
