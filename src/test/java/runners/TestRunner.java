@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/",
         glue = "APISteps",
         dryRun = true,
-		tags = "@api",
+		tags = "@jsonpayload",
         monochrome = true,
 
         plugin = {"pretty",
