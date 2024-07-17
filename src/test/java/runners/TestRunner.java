@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/",
         glue = "APISteps",
-        dryRun = true,
+        dryRun = false,
 		tags = "@jsonpayload",
         monochrome = true,
 
